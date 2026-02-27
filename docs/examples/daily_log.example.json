@@ -1,0 +1,26 @@
+{
+  "logId": "510f1d9e-217d-4f57-b6cb-8ed06e67f7d3",
+  "userId": "62ecf0b5-212f-45d4-97fb-f30ac5c2f59d",
+  "date": "2026-01-11",
+  "wakeTime": "07:12",
+  "sleepTime": "23:20",
+  "stressLevel": 4,
+  "energyLevel": 7,
+  "planCompletionPercent": 86,
+  "workoutRpe": 7.5,
+  "completedItems": [
+    {
+      "itemType": "training",
+      "status": "done",
+      "difficulty": 7,
+      "comment": "Last set felt challenging"
+    },
+    {
+      "itemType": "recovery",
+      "status": "done",
+      "difficulty": 2,
+      "comment": "Meditation helped with stress"
+    }
+  ],
+  "notes": "Slightly late wake-up, otherwise on plan"
+}

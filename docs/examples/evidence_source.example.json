@@ -1,0 +1,12 @@
+{
+  "id": "13a50912-c1ff-4dc9-a8e3-fdbe8ceb0f50",
+  "title": "Sleep Duration and Health Outcomes: A Systematic Review",
+  "sourceType": "systematic_review",
+  "url": "https://example.org/sleep-review",
+  "evidenceLevel": "A",
+  "contraindications": [
+    "Consult physician for chronic insomnia",
+    "Adjust protocol for shift workers"
+  ],
+  "notes": "Use conservative bedtime shifts of 15-20 minutes"
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/daily_plan.schema.json",
+  "title": "DailyPlan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["planId", "userId", "date", "sleep", "training", "recovery", "habit"],
+  "properties": {
+    "planId": { "type": "string", "format": "uuid" },
+    "userId": { "type": "string", "format": "uuid" },
+    "date": { "type": "string", "format": "date" },
+    "sleep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["targetWakeTime", "targetBedTime"],
+      "properties": {
+        "targetWakeTime": { "type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$" },
+        "targetBedTime": { "type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$" },
+        "durationHours": { "type": "number", "minimum": 5, "maximum": 10 }
+      }
+    },
+    "training": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["exercise", "sets", "reps", "rpeTarget"],
+        "properties": {
+          "exercise": { "type": "string", "minLength": 2 },
+          "sets": { "type": "integer", "minimum": 1, "maximum": 10 },
+          "reps": { "type": "integer", "minimum": 1, "maximum": 100 },
+          "weightKg": { "type": "number", "minimum": 0, "maximum": 400 },
+          "rpeTarget": { "type": "number", "minimum": 1, "maximum": 10 },
+          "evidenceSourceId": { "type": "string", "format": "uuid" }
+        }
+      }
+    },
+    "recovery": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["activity", "durationMin"],
+        "properties": {
+          "activity": { "type": "string", "enum": ["walk", "meditation", "breathing", "stretching"] },
+          "durationMin": { "type": "integer", "minimum": 5, "maximum": 120 },
+          "evidenceSourceId": { "type": "string", "format": "uuid" }
+        }
+      }
+    },
+    "habit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title"],
+      "properties": {
+        "title": { "type": "string", "minLength": 3 },
+        "description": { "type": "string" },
+        "evidenceSourceId": { "type": "string", "format": "uuid" }
+      }
+    }
+  }
+}

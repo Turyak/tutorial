@@ -1,0 +1,32 @@
+{
+  "planId": "61438373-5281-4db8-9e4c-b5ff1d0ef87d",
+  "userId": "62ecf0b5-212f-45d4-97fb-f30ac5c2f59d",
+  "date": "2026-01-11",
+  "sleep": {
+    "targetWakeTime": "07:00",
+    "targetBedTime": "23:15",
+    "durationHours": 7.75
+  },
+  "training": [
+    {
+      "exercise": "Goblet Squat",
+      "sets": 3,
+      "reps": 10,
+      "weightKg": 18,
+      "rpeTarget": 7,
+      "evidenceSourceId": "13a50912-c1ff-4dc9-a8e3-fdbe8ceb0f50"
+    }
+  ],
+  "recovery": [
+    {
+      "activity": "meditation",
+      "durationMin": 10,
+      "evidenceSourceId": "13a50912-c1ff-4dc9-a8e3-fdbe8ceb0f50"
+    }
+  ],
+  "habit": {
+    "title": "No screens 15 minutes before sleep",
+    "description": "Use breathing practice instead",
+    "evidenceSourceId": "13a50912-c1ff-4dc9-a8e3-fdbe8ceb0f50"
+  }
+}

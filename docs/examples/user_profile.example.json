@@ -1,0 +1,14 @@
+{
+  "userId": "62ecf0b5-212f-45d4-97fb-f30ac5c2f59d",
+  "age": 31,
+  "sex": "male",
+  "heightCm": 181,
+  "weightKg": 82.4,
+  "familyStatus": "married",
+  "activityLevel": "moderate",
+  "goal": "fat_loss",
+  "targetBodyFatPercent": 14,
+  "goalDeadline": "2026-08-01",
+  "createdAt": "2026-01-10T08:30:00Z",
+  "updatedAt": "2026-01-10T08:30:00Z"
+}
