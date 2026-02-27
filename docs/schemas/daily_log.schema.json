@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/daily_log.schema.json",
+  "title": "DailyLog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["logId", "userId", "date", "wakeTime", "sleepTime", "stressLevel", "energyLevel", "planCompletionPercent"],
+  "properties": {
+    "logId": { "type": "string", "format": "uuid" },
+    "userId": { "type": "string", "format": "uuid" },
+    "date": { "type": "string", "format": "date" },
+    "wakeTime": { "type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$" },
+    "sleepTime": { "type": "string", "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$" },
+    "stressLevel": { "type": "integer", "minimum": 1, "maximum": 10 },
+    "energyLevel": { "type": "integer", "minimum": 1, "maximum": 10 },
+    "planCompletionPercent": { "type": "number", "minimum": 0, "maximum": 100 },
+    "workoutRpe": { "type": "number", "minimum": 1, "maximum": 10 },
+    "completedItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["itemType", "status"],
+        "properties": {
+          "itemType": { "type": "string", "enum": ["sleep", "training", "recovery", "habit"] },
+          "status": { "type": "string", "enum": ["done", "partial", "skipped"] },
+          "difficulty": { "type": "number", "minimum": 1, "maximum": 10 },
+          "comment": { "type": "string", "maxLength": 1000 }
+        }
+      }
+    },
+    "notes": { "type": "string", "maxLength": 2000 }
+  }
+}
